@@ -33,7 +33,6 @@ Clone the repository:
 bash
 Copy code
 git clone https://github.com/yourusername/telco-churn-prediction.git
-
 cd telco-churn-prediction
 
 Preprocessing the data: The notebook handles various preprocessing steps such as:
