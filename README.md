@@ -33,7 +33,9 @@ Clone the repository:
 bash
 Copy code
 git clone https://github.com/yourusername/telco-churn-prediction.git
+
 cd telco-churn-prediction
+
 Preprocessing the data: The notebook handles various preprocessing steps such as:
 Dropping less relevant columns like customerID, gender, etc.
 Converting the TotalCharges column to numeric.
@@ -41,6 +43,7 @@ Handling missing values and encoding categorical variables.
 Training the Model: The MLP model is initialized with multiple dense layers with ReLU activation functions and a sigmoid output layer for binary classification. Here's the core structure of the model:
 python
 Copy code
+
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(128, activation='relu', input_shape=(x_train.shape[1],)),
     tf.keras.layers.Dropout(0.5),
@@ -49,7 +52,9 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(32, activation='relu'),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
+
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
 Training and Evaluation:
 The model is trained using the training dataset, with validation data for monitoring.
 Training accuracy and loss are visualized to evaluate model performance.
